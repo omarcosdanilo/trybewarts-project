@@ -1,12 +1,11 @@
 function verificaLogin() {
-  const email = document.getElementById('inputEmail').value;
-  const senha = document.getElementById('inputSenha').value;
-  if (email === 'tryber@teste.com' && senha === '123456') {
-    window.alert('Olá, Tryber!');
+  const email = document.querySelector('#input-email');
+  const senha = document.querySelector('#input-senha');
+  if (email.value === 'tryber@teste.com' && senha.value === '123456') {
+    alert('Olá, Tryber!');
   } else {
-    window.alert('Email ou senha inválidos.');
+    alert('Email ou senha inválidos.');
   }
 }
-
-const entrar = document.getElementById('Login');
-entrar.addEventListener('click', verificaLogin);
+const myBtn = document.querySelector('#btn-login');
+myBtn.addEventListener('click', verificaLogin);
