@@ -1,4 +1,4 @@
-function check() {
+function verificaLogin() {
   const email = document.getElementById('inputEmail').value;
   const senha = document.getElementById('inputSenha').value;
   if (email === 'tryber@teste.com' && senha === '123456') {
@@ -9,4 +9,4 @@ function check() {
 }
 
 const entrar = document.getElementById('Login');
-entrar.addEventListener('click', check);
+entrar.addEventListener('click', verificaLogin);
