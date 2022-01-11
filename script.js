@@ -1,3 +1,4 @@
+// Verifica se o login e senha são válidos
 function verificaLogin() {
   const email = document.querySelector('#input-email');
   const senha = document.querySelector('#input-senha');
