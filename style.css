@@ -18,7 +18,7 @@ main {
 #evaluation-form {
   display: flex;
   width: 675px;
-  height: 50px;
+  height: 200px;
   flex-direction: column;
   flex-wrap: wrap;
 
@@ -31,3 +31,8 @@ main {
 #evaluation-form input select{
   width: 40%;
 }
+
+#evaluation-form label{
+  flex-direction: row;
+}
+
