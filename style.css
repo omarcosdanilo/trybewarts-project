@@ -9,6 +9,11 @@
   align-items: center;
 }
 
-.trybewarts-header-title {
+main {
+  display: flex;
+}
 
+#evaluation-form{
+  width: 675px;
+  display: flex;
 }
