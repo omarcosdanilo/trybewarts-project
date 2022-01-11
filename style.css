@@ -20,19 +20,8 @@ main {
   width: 675px;
   height: 200px;
   flex-direction: column;
-  flex-wrap: wrap;
-
 }
 
 #trybewarts-forms-logo {
   height: 500px;
 }
-
-#evaluation-form input select{
-  width: 40%;
-}
-
-#evaluation-form label{
-  flex-direction: row;
-}
-
