@@ -1,6 +1,6 @@
 // Verifica se o login e senha são válidos
 function verificaLogin() {
-  const email = document.querySelector('#input-email');
+  const email = document.querySelector('#email');
   const senha = document.querySelector('#input-senha');
   if (email.value === 'tryber@teste.com' && senha.value === '123456') {
     alert('Olá, Tryber!');
