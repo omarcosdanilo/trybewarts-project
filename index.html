@@ -1,44 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
-</head>
+  <body>
+    <header class="header">
+      <img
+        class="trybewarts-header-logo"
+        src="images/trybewarts-header-logo.svg"
+        alt="Logo Tyberwarts"
+      />
+      <h1 id="trybewarts-header-title">Trybewarts</h1>
+      <form action="" class="trybewarts-login">
+        <input type="email" name="email" id="email" placeholder="Email" />
+        <input
+          type="password"
+          name="password"
+          id="input-senha"
+          placeholder="Senha"
+        />
+        <button id="btn-login">Entrar</button>
+      </form>
+    </header>
 
-<body>
-  <header class="header">
-    <img class="trybewarts-header-logo" src="images/trybewarts-header-logo.svg" alt="Logo Tyberwarts">
-    <h1 id="trybewarts-header-title">Trybewarts</h1>
-    <form action="" class="trybewarts-login">
-      <input type="email" name="email" id="email" placeholder="Email">
-      <input type="password" name="password" id="input-senha" placeholder="Senha">
-      <button id="btn-login">Entrar</button>
-    </form>
-  </header>
+    <main>
+      <form action="" id="evaluation-form">
+        <div>
+          <input type="text" name="" id="input-name" placeholder="Nome" />
+          <input
+            type="text"
+            name=""
+            id="input-lastname"
+            placeholder="Sobrenome"
+          />
+        </div>
+        <div>
+          <input type="email" name="" id="input-email" placeholder="Email" />
+          <select name="" id="house">
+            <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+            <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+            <option value="Corvinode" id="corvinode-house">Corvinode</option>
+            <option value="Pytherina" id="pytherina-house">Pytherina</option>
+          </select>
+        </div>
 
-  <main>
-    <form action="" id="evaluation-form">
-      <div>
-        <input type="text" name="" id="input-name" placeholder="Nome">
-        <input type="text" name="" id="input-lastname" placeholder="Sobrenome">
-      </div>
-      <div>
-        <input type="email" name="" id="input-email" placeholder="Email">
-        <select name="" id="house"> 
-          <option value="Gitnória" id="gitnoria-house">Gitnória</option>
-          <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
-          <option value="Corvinode" id="corvinode-house">Corvinode</option>
-          <option value="Pytherina" id="pytherina-house">Pytherina</option>
-        </select>
-      </div>
-    </form>
-    <img src="images/trybewarts-colored.svg" alt="Brasão Trybewarts" id="trybewarts-forms-logo">
-  </main>
-  <script src="script.js"></script>
-</body>
+        <label for="" id="label-family">Qual sua família?</label>
 
-</html> 
+        <div>
+          <input type="radio" name="family" id="front" value="Frontend">
+          <label for="front">Frontend</label>
+        </div>
+
+        <div>
+          <input type="radio" name="family" id="back" value="Backend">
+          <label for="back">Backend</label>
+        </div>
+
+        <div>
+          <input type="radio" name="family" id="fullstack" value="FullStack">
+          <label for="fullstack">Fullstack</label>
+        </div>
+      </form>
+      <img
+        src="images/trybewarts-colored.svg"
+        alt="Brasão Trybewarts"
+        id="trybewarts-forms-logo"
+      />
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
