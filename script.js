@@ -1,4 +1,4 @@
-// Verifica se o login e senha são válidos
+// ========= Verifica se o login e senha são válidos ===========
 function verificaLogin() {
   const email = document.querySelector('#email');
   const senha = document.querySelector('#input-senha');
@@ -10,23 +10,24 @@ function verificaLogin() {
 }
 const myBtn = document.querySelector('#btn-login');
 myBtn.addEventListener('click', verificaLogin);
-const submitBtn = document.querySelector('#submit-btn');
-const checBox = document.querySelector('#agreement');
+
+// ============ Verifica se o check está marcado =============
+const button = document.querySelector('#submit-btn');
+const check = document.querySelector('#agreement');
 
 function desabilitaBotao() {
-  submitBtn.setAttribute('disabled', 'disabled');
+  button.setAttribute('disabled', 'disabled');
 }
 
 function habilitaBotao() {
-  submitBtn.removeAttribute('disabled');
+  button.removeAttribute('disabled');
 }
 
 function verificaCheck() {
-  if (checBox.checked) {
+  if (check.checked) {
     habilitaBotao();
   } else {
     desabilitaBotao();
   }
 }
-
-checBox.addEventListener('click', verificaCheck);
+check.addEventListener('click', verificaCheck);
