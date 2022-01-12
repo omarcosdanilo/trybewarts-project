@@ -30,4 +30,13 @@ function verificaCheck() {
     desabilitaBotao();
   }
 }
+
+const textArea = document.getElementById('textarea');
+const contador = document.getElementById('counter');
+function caracteres() {
+  const teste2 = textArea.textLength;
+  const resultado = 500 - teste2;
+  contador.innerHTML = `Caracteres: ${resultado}.`;
+}
+textArea.addEventListener('input', caracteres);
 check.addEventListener('click', verificaCheck);
