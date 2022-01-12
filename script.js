@@ -31,3 +31,14 @@ function verificaCheck() {
   }
 }
 check.addEventListener('click', verificaCheck);
+
+// ========== Contador da text area ========
+const counter = document.querySelector('#counter');
+const textArea = document.querySelector('#textarea');
+const teste = counter.innerHTML;
+
+function contador() {
+  const valor = teste - textArea.value.length;
+  counter.innerHTML = valor;
+}
+textArea.addEventListener('input', contador);
