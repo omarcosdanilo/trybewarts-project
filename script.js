@@ -10,3 +10,23 @@ function verificaLogin() {
 }
 const myBtn = document.querySelector('#btn-login');
 myBtn.addEventListener('click', verificaLogin);
+const submitBtn = document.querySelector('#submit-btn');
+const checBox = document.querySelector('#agreement');
+
+function desabilitaBotao() {
+  submitBtn.setAttribute('disabled', 'disabled');
+}
+
+function habilitaBotao() {
+  submitBtn.removeAttribute('disabled');
+}
+
+function verificaCheck() {
+  if (checBox.checked) {
+    habilitaBotao();
+  } else {
+    desabilitaBotao();
+  }
+}
+
+checBox.addEventListener('click', verificaCheck);
