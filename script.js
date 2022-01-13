@@ -85,12 +85,13 @@ function criaObjeto(event) {
   attInfo();
   catchMateria();
   const paragrafo = document.getElementById('infos');
-  paragrafo.innerHTML = `Nome: ${nome.value} ${sobrenome.value};
-  Email: ${email.value};
-  Casa: ${casa.value};
-  Família: ${familia.value};
-  Avaliação: ${nota.value};
-  Observações: ${observacao.value};
+  const forms = document.querySelector('#evaluation-form')
+  forms.innerHTML = `Nome: ${nome.value} ${sobrenome.value};<br>
+  Email: ${email.value};<br>
+  Casa: ${casa.value};<br>
+  Família: ${familia.value};<br>
+  Avaliação: ${nota.value};<br>
+  Observações: ${observacao.value};<br>
   Matérias: ${materiaString}.`;
 }
 button.addEventListener('click', criaObjeto);
