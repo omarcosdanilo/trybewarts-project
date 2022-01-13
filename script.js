@@ -14,7 +14,6 @@ myBtn.addEventListener('click', verificaLogin);
 // ============ Verifica se o check está marcado =============
 const button = document.querySelector('#submit-btn');
 const check = document.querySelector('#agreement');
-
 function desabilitaBotao() {
   button.setAttribute('disabled', 'disabled');
 }
@@ -30,13 +29,56 @@ function verificaCheck() {
     desabilitaBotao();
   }
 }
-
-const textArea = document.getElementById('textarea');
-const contador = document.getElementById('counter');
-function caracteres() {
-  const teste2 = textArea.textLength;
-  const resultado = 500 - teste2;
-  contador.innerHTML = `Caracteres: ${resultado}.`;
-}
-textArea.addEventListener('input', caracteres);
 check.addEventListener('click', verificaCheck);
+
+// ========== Contador da text area ========
+const counter = document.querySelector('#counter');
+const textArea = document.querySelector('#textarea');
+const teste = counter.innerHTML;
+
+function contador() {
+  const valor = teste - textArea.value.length;
+  counter.innerHTML = valor;
+}
+textArea.addEventListener('input', contador);
+
+// ========== Form preenchido ========
+const materia = [];
+let nome = document.querySelector('#input-name');
+let sobrenome = document.querySelector('#input-lastname');
+let email = document.querySelector('#input-email');
+let casa = document.querySelector('#house');
+let familia = document.querySelector('input[name=family]:checked');
+let nota = document.querySelector('input[name=rate]:checked');
+let observacao = document.querySelector('#textarea');
+document.querySelectorAll('input[class=subject]:checked').forEach((element) => {
+  materia.push(element.value);
+});
+
+function attInfo() {
+  nome = document.querySelector('#input-name');
+  sobrenome = document.querySelector('#input-lastname');
+  email = document.querySelector('#input-email');
+  casa = document.querySelector('#house');
+  familia = document.querySelector('input[name=family]:checked');
+  nota = document.querySelector('input[name=rate]:checked');
+  observacao = document.querySelector('#textarea');
+  document.querySelectorAll('input[class=subject]:checked').forEach((element) => {
+    materia.push(element.value);
+  });
+}
+
+function criaObjeto(event) {
+  event.preventDefault();
+  attInfo();
+  const paragrafo = document.getElementById('infos');
+  paragrafo.innerHTML = `Nome: ${nome.value} ${sobrenome.value};
+  Email: ${email.value};
+  Casa: ${casa.value};
+  Família: ${familia.value};
+  Avaliação: ${nota.value};
+  Observações: ${observacao.value};
+  Matérias: ${materia[0]}, ${materia[1]}, ${materia[2]}`;
+  console.log();
+}
+button.addEventListener('click', criaObjeto);
