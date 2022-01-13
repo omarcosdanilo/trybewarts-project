@@ -14,7 +14,6 @@ myBtn.addEventListener('click', verificaLogin);
 // ============ Verifica se o check está marcado =============
 const button = document.querySelector('#submit-btn');
 const check = document.querySelector('#agreement');
-
 function desabilitaBotao() {
   button.setAttribute('disabled', 'disabled');
 }
@@ -43,46 +42,42 @@ function contador() {
 }
 textArea.addEventListener('input', contador);
 
-// ========== Substituindo a tag form pelos valores dos input ===========
+// ========== Form preenchido ========
+const materia = [];
 let nome = document.querySelector('#input-name');
-let sobreNome = document.querySelector('#input-lastname');
+let sobrenome = document.querySelector('#input-lastname');
 let email = document.querySelector('#input-email');
 let casa = document.querySelector('#house');
 let familia = document.querySelector('input[name=family]:checked');
-const materias = [];
-document.querySelectorAll('input[class=subject]:checked').forEach((element) => {
-  materias.push(element.value);
-});
 let nota = document.querySelector('input[name=rate]:checked');
-let observacoes = document.querySelector('#textarea');
+let observacao = document.querySelector('#textarea');
+document.querySelectorAll('input[class=subject]:checked').forEach((element) => {
+  materia.push(element.value);
+});
 
-function variaveis() {
+function attInfo() {
   nome = document.querySelector('#input-name');
-  sobreNome = document.querySelector('#input-lastname');
+  sobrenome = document.querySelector('#input-lastname');
   email = document.querySelector('#input-email');
   casa = document.querySelector('#house');
   familia = document.querySelector('input[name=family]:checked');
-  document.querySelectorAll('input[class=subject]:checked').forEach((element) => {
-    materias.push(element.value);
-  });
   nota = document.querySelector('input[name=rate]:checked');
-  observacoes = document.querySelector('#textarea');
+  observacao = document.querySelector('#textarea');
+  document.querySelectorAll('input[class=subject]:checked').forEach((element) => {
+    materia.push(element.value);
+  });
 }
 
-function criaParagrafo(event) {
-  variaveis();
+function criaObjeto(event) {
   event.preventDefault();
-
-  const paragrafo = document.querySelector('#objeto');
-
-  paragrafo.innerHTML = `Nome: ${nome.value} ${sobreNome.value}
-  Email: ${email.value}
-  Casa: ${casa.value}
-  Família: ${familia.value}
-  Matérias: ${materias[0]}, ${materias[1]}, ${materias[2]}
-  Avaliação: ${nota.value}
-  Observações: ${observacoes.value}`;
+  attInfo();
+  const paragrafo = document.getElementById('infos');
+  paragrafo.innerHTML = `Nome: ${nome.value} ${sobrenome.value};
+  Email: ${email.value};
+  Casa: ${casa.value};
+  Família: ${familia.value};
+  Avaliação: ${nota.value};
+  Observações: ${observacao.value};
+  Matérias: ${materia[0]}, ${materia[1]}, ${materia[2]}`;
 }
-
-const botao = document.querySelector('#submit-btn');
-botao.addEventListener('click', criaParagrafo);
+button.addEventListener('click', criaObjeto);
