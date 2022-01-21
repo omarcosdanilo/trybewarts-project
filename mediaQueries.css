@@ -1,0 +1,125 @@
+@media screen and (max-width: 1024px) {
+  
+  header {
+    flex-direction: column;
+  }
+
+  main {
+    justify-content: center;
+  }
+
+  #trybewarts-forms-logo {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .trybewarts-login {
+   flex-direction: column;
+   gap: 5px;
+   width: 100%;
+  }
+
+  header #input-senha {
+    margin: 0;
+  }
+
+  header #input-senha, #email {
+    width: 80%;
+  }
+  
+  header #email, #btn-login {
+    width: 80%;
+  }
+
+  #name-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #family-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  #family {
+    text-align: center;
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 1.2em;
+    height: auto;
+  }
+
+  #family label {
+    width: 100%;
+  }
+
+
+  #content {
+    width: auto;
+    text-align: start;
+  }
+
+  #content-flex {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 500px){
+    
+    #family {
+      text-align: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 1.2em;
+      height: auto;
+    }
+
+    #content {
+      width: auto;
+      height: auto;
+      text-align: justify;
+    }
+  
+
+    #content-flex {
+      height: auto;
+      flex-direction: row;
+    }
+
+    #content-flex div {
+      flex: 0 1 100px;
+    }
+
+    #nota {
+      flex-wrap: wrap;
+    }
+
+    #nota label {
+      text-align: center;
+      width: 100%;
+    }
+
+    #agree {
+      text-align: center;
+    }
+
+    #submit-btn {
+      width: 50%;
+      margin: auto;
+    }
+
+    footer p {
+      color: white;
+    }
+    
+  }
+
+}

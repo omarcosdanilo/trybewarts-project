@@ -5,7 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="mediaQueries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Trybewarts</title>
   </head>
 
   <body>
@@ -30,8 +37,8 @@
 
     <main>
       <form action="" id="evaluation-form">
-        <div>
-          <input type="text" name="nome" id="input-name" placeholder="Nome" />
+        <div id="name-container">
+          <input type="text" name="nome" id="input-name" placeholder="Nome"/>
           <input
             type="text"
             name="sobrenome"
@@ -39,8 +46,13 @@
             placeholder="Sobrenome"
           />
         </div>
-        <div>
-          <input type="email" name="email" id="input-email" placeholder="Email" />
+        <div id="div-select">
+          <input
+            type="email"
+            name="email"
+            id="input-email"
+            placeholder="Email"
+          />
           <select name="casa" id="house">
             <option value="Gitnória" id="gitnoria-house">Gitnória</option>
             <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
@@ -48,71 +60,115 @@
             <option value="Pytherina" id="pytherina-house">Pytherina</option>
           </select>
         </div>
-
-        <label for="" id="label-family">Qual sua família?</label>
-        <div>
-          <label for="Frontend"
-            ><input
-              type="radio"
-              name="family"
-              id="Frontend"
-              value="Frontend"
-            />Frontend</label
-          >
+        <hr />
+        <div id="family-content">
+          <div id="family">
+            <label for="" id="label-family">Qual sua família?</label>
+            <div>
+              <label for="Frontend"
+                ><input
+                  type="radio"
+                  name="family"
+                  id="Frontend"
+                  value="Frontend"
+                />Frontend</label
+              >
+            </div>
+            <div>
+              <label for="Backend"
+                ><input
+                  type="radio"
+                  name="family"
+                  id="Backend"
+                  value="Backend"
+                />Backend</label
+              >
+            </div>
+            <div>
+              <label for="FullStack"
+                ><input
+                  type="radio"
+                  name="family"
+                  id="FullStack"
+                  value="FullStack"
+                />FullStack</label
+              >
+            </div>
+          </div>
+          <div id="content">
+            <label for="" id="label-content"
+              >Qual conteúdo você está com mais vontade de aprender?</label
+            >
+            <div id="content-flex">
+              <div>
+                <input
+                  type="checkbox"
+                  name=""
+                  value="HoFs"
+                  class="subject"
+                  id="hofs"
+                />
+                <label for="hofs">HoFs</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name=""
+                  value="Jest"
+                  class="subject"
+                  id="jest"
+                />
+                <label for="jest">Jest</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name=""
+                  value="Promises"
+                  class="subject"
+                  id="promises"
+                />
+                <label for="promises">Promises</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name=""
+                  value="React"
+                  class="subject"
+                  id="react"
+                />
+                <label for="react">React</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name=""
+                  value="SQL"
+                  class="subject"
+                  id="sql"
+                />
+                <label for="sql">SQL</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name=""
+                  value="Python"
+                  class="subject"
+                  id="python"
+                />
+                <label for="python">Python</label>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <label for="Backend"
-            ><input
-              type="radio"
-              name="family"
-              id="Backend"
-              value="Backend"
-            />Backend</label
-          >
-        </div>
-        <div>
-          <label for="FullStack"
-            ><input
-              type="radio"
-              name="family"
-              id="FullStack"
-              value="FullStack"
-            />FullStack</label
-          >
-        </div>
-
-        <label for="" id="label-content"
-          >Qual conteúdo você está com mais vontade de aprender?</label
-        >
-        <div>
-          <input type="checkbox" name="" value="HoFs" class="subject" id="hofs" />
-          <label for="hofs">HoFs</label>
-        </div>
-        <div>
-          <input type="checkbox" name="" value="Jest" class="subject" id="jest" />
-          <label for="jest">Jest</label>
-        </div>
-        <div>
-          <input type="checkbox" name="" value="Promises" class="subject" id="promises" />
-          <label for="promises">Promises</label>
-        </div>
-        <div>
-          <input type="checkbox" name="" value="React" class="subject" id="react" />
-          <label for="react">React</label>
-        </div>
-        <div>
-          <input type="checkbox" name="" value="SQL" class="subject" id="sql" />
-          <label for="sql">SQL</label>
-        </div>
-        <div>
-          <input type="checkbox" name="" value="Python" class="subject" id="python" />
-          <label for="python">Python</label>
-        </div>
+        <hr />
         <div id="nota">
           <label for="" id="label-rate">Como você avalia a Trybewarts?</label>
 
           <div>
-            <input type="radio" name="rate" value="1" id="1"/>
+            <input type="radio" name="rate" value="1" id="1" />
             <label for="1">1</label>
           </div>
           <div>
@@ -152,20 +208,27 @@
             <label for="10">10</label>
           </div>
         </div>
-
+        <div id="text-area"></div>
         <label for="textarea" class="textarea">Deixe seu comentário:</label>
-        <textarea name="comentario" id="textarea" cols="30" rows="10" maxlength="500"></textarea>
-        <p id="counter">500</p>
-
-        <div>
-          <label for="agreement" id="label-infos">Você concorda com o uso das informações acima?</label>
-          <input type="checkbox" name="" id="agreement">
+        <textarea
+          name="comentario"
+          id="textarea"
+          cols="30"
+          rows="5"
+          maxlength="500"
+          ></textarea>
+          <p id="counter">500</p>
+        <div id="agree">
+          <label for="agreement" id="label-infos"
+            >Você concorda com o uso das informações acima?</label
+          >
+          <input type="checkbox" name="" id="agreement" />
         </div>
 
         <button type="submit" id="submit-btn" disabled>Enviar</button>
         <p id="infos"></p>
       </form>
-      
+
       <img
         src="images/trybewarts-colored.svg"
         alt="Brasão Trybewarts"
